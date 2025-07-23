@@ -1,4 +1,4 @@
-# Seiteaufbau
+# Seitenaufbau
 
 ## 1. Grundgerüst und Landmarken
 
