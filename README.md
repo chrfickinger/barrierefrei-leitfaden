@@ -263,4 +263,4 @@
 
 ---
 
-Mit diesem Leitfaden stellst du sicher, dass deine Links klar, verständlich und für alle Nutzer:innen zugänglich sind.
+Mit diesem Leitfaden stellst du sicher, dass deine Seiten klar, verständlich und für alle Nutzer:innen zugänglich sind.
