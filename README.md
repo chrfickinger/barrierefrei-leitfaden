@@ -170,8 +170,8 @@ Versehe Inhalte mit zusätzlichen Erklärungen wenn notwendig. Wenn die Semantik
 
 ### Fokus-Reihenfolge
 Halte die logische Reihenfolge für Tastaturnavigation ein. Viele Nutzer bedienen Webseiten ausschließlich mit Tastatur. Wenn der Fokus nicht sinnvoll gesetzt ist, können Inhalte unzugänglich oder verwirrend sein.
-- ✔ Links, Buttons, Formulare mit`tabindex` auszeichnen.
-- ✔ Dekorative Bereiche aus Tastaturnavigation enfernen.
+- Links, Buttons, Formulare mit`tabindex` auszeichnen.
+- Dekorative Bereiche aus Tastaturnavigation enfernen.
 
 ```html
 <!-- Link nicht erreichbar-->
@@ -207,10 +207,10 @@ Verwende sinnvolle, aussagekräftige Linktexte. Screenreader-Nutzer hören oft n
 - Vermeide generische Phrasen
 - Linktexte sollten auch ohne umgebenden Kontext Sinn ergeben.
 ```html
-<!-- Falsch: -->
+<!-- Falsch: Linktext nicht aussagekräftig -->
 <a href="/download">Hier klicken</a>
 
-<!-- Richtig: -->
+<!-- Richtig: Linktext ist eindeutig beschrieben -->
 <a href="/download">Vereinsbroschüre als PDF herunterladen</a>
 ```
 
@@ -218,28 +218,39 @@ Verwende sinnvolle, aussagekräftige Linktexte. Screenreader-Nutzer hören oft n
 - Nutze keine doppelten Linktexte auf einer Seite. Verwende unterschiedliche Texte, z. B. „Mehr erfahren zu Training“ und „Mehr erfahren zu Events“ statt zweimal „Mehr erfahren“.
 - Linktext dürfen nicht abgeschnitten werden. Ohne sichtbaren Kontext ist nicht klar, was genau passiert („Events anzeigen? erstellen? Infos?“).
 ```html
-<!-- Falsch: -->
+<!-- Falsch: Linktext wird abgeschnitten -->
 <a href="/events">Events …</a>
 
-<!-- Richtig: -->
-<a href="/events">Zu unseren Events</a>.
+<!-- Richtig: Linktext ist endeutig beschrieben -->
+<a href="/events">Zu unseren Events</a>
 ```
 ### Icon-only Links
 Verlinkte Icons ohne sichtbaren Text müssen für Screenreader verständlich gemacht werden. Wenn ein Link oder Button nur aus einem Icon besteht (z. B. ein Haus-Symbol für die Startseite), können Screenreader-Nutzer ohne zusätzliche Maßnahmen nicht erkennen, wohin der Link führt.
 ```html
+<!-- Richtig: Linktext als aria-label -->
 <a href="/home" aria-label="Zur Startseite">
 	<svg>…</svg>
 </a>
 
-<!-- oder -->
-
+<!-- Richtig: Linktext als sr-only -->
 <a href="/home">
 	<svg>…</svg>
 	<span class="sr-only">Zur Startseite</span>
 </a>
 ```
 ### Kein Title-Tag verwenden
-`title`-Attribute sind kein Ersatz. Screenreader lesen `title` oft nicht vor. Nutze stattdessen klaren Linktext oder `aria-label`.
+Das title-Attribut wird von Screenreadern oft nicht oder nur unzuverlässig vorgelesen. Für wichtige Informationen und Beschriftungen sollte daher immer sichtbarer Text oder ein ARIA-Attribut verwendet werden.
+- Verzichte auf das title-Attribut für wichtige Hinweise oder Beschriftungen.
+- Nutze stattdessen sichtbaren Text, aria-label oder aria-describedby.
+- Prüfe, ob alle relevanten Informationen auch ohne title-Attribut zugänglich sind.
+```html
+<!-- Falsch: title-Attribut wird verwendet -->
+<a href="/kontakt" title="Kontaktformular öffnen">
+
+<!-- Richtig: aria-label statt title-Attribut -->
+<a href="/kontakt" aria-label="Kontaktformular öffnen">
+```
+
 
 ### Verwendung von .sr-only
 Zusätzliche Informationen nur für Screenreader
@@ -487,7 +498,7 @@ Die folgende Checkliste hilft dabei, Webseiten so zu gestalten, dass sie für Me
 - [ ] **Links:** Keine doppelten Linktexte [→ Erklärung](#kontext-und-redundanz)
 - [ ] **Links:** Linktexte nicht abschneiden [→ Erklärung](#kontext-und-redundanz)
 - [ ] **Links:** Verlinkte Icons ohne sichtbaren Text beschreiben [→ Erklärung](#icon-only-links)
-- [ ] **Links:** [aria-label] statt [title] benutzen [→ Erklärung](#kein-title-tag-verwenden)
+- [ ] **Links:** Kein [title]-Tag benutzen [→ Erklärung](#kein-title-tag-verwenden)
 - [ ] **Links:** Zusätzliche Hinweise mit [.sr-only] beschreiben [→ Erklärung](#verwendung-von-sr-only)
 - [ ] **Links:** Längere Hinweise mit [aria-describedby] definieren [→ Erklärung](#zusätzliches-aria-attribut)
 - [ ] **Bilder:** Erstelle [alt]-Text für Bilder [→ Erklärung](#bildbeschreibungen)
