@@ -45,9 +45,7 @@ Mit diesem Leitfaden stellst du sicher, dass deine Seiten klar, verständlich un
 
 ## Grundgerüst
 ### Landmarken
-**Semantische Regionen definieren.**
-
-Nutze die nativen HTML5-Elemente als Landmarken, wann immer möglich. Screenreader erkennen sie automatisch und Nutzer können per Shortcut schnell zwischen Landmarks springen und gezielt Bereiche wie Navigation oder Hauptinhalt erreichen.
+Nutze die nativen HTML5-Elemente als Landmarken um semantische Regionen zu definieren, wann immer möglich. Screenreader erkennen sie automatisch und Nutzer können per Shortcut schnell zwischen Landmarks springen und gezielt Bereiche wie Navigation oder Hauptinhalt erreichen.
 - **Banner**
 
 	Oberster Bereich der Seite enthält Logo und Hauptnavigation.
@@ -105,14 +103,12 @@ Nutze die nativen HTML5-Elemente als Landmarken, wann immer möglich. Screenread
 	```
 
 ### ARIA-Attribute
-**Inhalte mit zusätzlichen Erklärungen versehen wenn notwendig.**
-
-Wenn die Semantik von HTML nicht ausreicht (z. B. bei mehreren Navigationsbereichen), helfen ARIA-Labels Screenreader-Nutzern, den Zweck zu verstehen.
+Versehe Inhalte mit zusätzlichen Erklärungen wenn notwendig. Wenn die Semantik von HTML nicht ausreicht (z. B. bei mehreren Navigationsbereichen), helfen ARIA-Labels Screenreader-Nutzern, den Zweck zu verstehen.
 
 **Best Practice**
-1. Zuerst HTML-Semantik nutzen (Label, Überschrift, `<legend>`, `<caption>`, etc).
-2. ARIA nur ergänzen, wenn es keine native Möglichkeit gibt.
-3. „No ARIA is better than bad ARIA“.
+- Zuerst HTML-Semantik nutzen (Label, Überschrift, `<legend>`, `<caption>`, etc).
+- ARIA nur ergänzen, wenn es keine native Möglichkeit gibt.
+- „No ARIA is better than bad ARIA“.
 
 **Beispiele**
 - **aria-label**
@@ -172,9 +168,7 @@ Wenn die Semantik von HTML nicht ausreicht (z. B. bei mehreren Navigationsbereic
 ## Tastatursteuerung
 
 ### Fokus-Reihenfolge
-**Logische Reihenfolge für Tastaturnavigation einhalten.**
-
-Viele Nutzer bedienen Webseiten ausschließlich mit Tastatur. Wenn der Fokus nicht sinnvoll gesetzt ist, können Inhalte unzugänglich oder verwirrend sein.
+Halte die logische Reihenfolge für Tastaturnavigation ein. Viele Nutzer bedienen Webseiten ausschließlich mit Tastatur. Wenn der Fokus nicht sinnvoll gesetzt ist, können Inhalte unzugänglich oder verwirrend sein.
 - Links, Buttons, Formulare mit`tabindex` auszeichnen.
 - Dekorative Bereiche aus Tastaturnavigation enfernen.
 
@@ -190,9 +184,7 @@ Viele Nutzer bedienen Webseiten ausschließlich mit Tastatur. Wenn der Fokus nic
 ```
 
 ### Skip Link
-**Sprungmarke zum Hauptinhalt einbauen.**
-
-Erlaubt dem Nutzer direkt zum Hauptinhalt zu springen.
+Baue eine Sprungmarke zum Hauptinhalt ein. Das erlaubt dem Nutzer direkt zum Inhaltsbereich zu springen.
 ```html
 <a href="#main" class="skip-link">Zum Hauptinhalt springen</a>
 ```
@@ -200,9 +192,7 @@ Erlaubt dem Nutzer direkt zum Hauptinhalt zu springen.
 ---
 
 ## Überschriften
-**Überschriften-Hierarchie einhalten.**
-
-Screenreader erlauben Navigation per Überschriften. Eine saubere, logische Struktur erleichtert Orientierung und Verständnis.
+Halte die Überschriften-Hierarchie ein. Screenreader erlauben Navigation per Überschriften. Eine saubere, logische Struktur erleichtert Orientierung und Verständnis.
   - Überschriften-Reihenfolge einhalten: `<h1>` bis `<h6>`
   - Jede Seite nur eine `<h1>`
   - Logische Gliederung: keine Sprünge von `<h2>` zu `<h4>`.
@@ -210,24 +200,22 @@ Screenreader erlauben Navigation per Überschriften. Eine saubere, logische Stru
 ---
 
 ## Links
-**Sinnvolle, aussagekräftige Linktexte verwenden**
-
-Screenreader-Nutzer hören oft nur eine Liste von Links.
+Verwende sinnvolle, aussagekräftige Linktexte. Screenreader-Nutzer hören oft nur eine Liste von Links.
 
 ### Aussagekräftige Linktexte
 - Vermeide generische Phrasen
-	```html
-	<!-- Falsch: -->
-	<a href="/download">Hier klicken</a>
+- Linktexte sollten auch ohne umgebenden Kontext Sinn ergeben.
+```html
+<!-- Falsch: -->
+<a href="/download">Hier klicken</a>
 
-	<!-- Richtig: -->
-	<a href="/download">Vereinsbroschüre als PDF herunterladen</a>
-	```
-- Zusammenhang verstehen. Linktexte sollten auch ohne umgebenden Kontext Sinn ergeben.
+<!-- Richtig: -->
+<a href="/download">Vereinsbroschüre als PDF herunterladen</a>
+```
 
 ### Kontext und Redundanz
-- Keine doppelten Linktexte auf einer Seite. Verwende unterschiedliche Texte, z. B. „Mehr erfahren zu Training“ und „Mehr erfahren zu Events“ statt zweimal „Mehr erfahren“.
-- Linktext nicht abschneiden. Ohne den sichtbaren Kontext ist nicht klar, was genau passiert („Events anzeigen? erstellen? Infos?“).
+- Nutze keine doppelten Linktexte auf einer Seite. Verwende unterschiedliche Texte, z. B. „Mehr erfahren zu Training“ und „Mehr erfahren zu Events“ statt zweimal „Mehr erfahren“.
+- Linktext dürfen nicht abgeschnitten werden. Ohne sichtbaren Kontext ist nicht klar, was genau passiert („Events anzeigen? erstellen? Infos?“).
 ```html
 <!-- Falsch: -->
 <a href="/events">Events …</a>
@@ -236,7 +224,7 @@ Screenreader-Nutzer hören oft nur eine Liste von Links.
 <a href="/events">Zu unseren Events</a>.
 ```
 ### Icon-only Links
-**Verlinkte Icons ohne sichtbaren Text müssen für Screenreader verständlich gemacht werden.** Wenn ein Link oder Button nur aus einem Icon besteht (z. B. ein Haus-Symbol für die Startseite), können Screenreader-Nutzer ohne zusätzliche Maßnahmen nicht erkennen, wohin der Link führt.
+Verlinkte Icons ohne sichtbaren Text müssen für Screenreader verständlich gemacht werden. Wenn ein Link oder Button nur aus einem Icon besteht (z. B. ein Haus-Symbol für die Startseite), können Screenreader-Nutzer ohne zusätzliche Maßnahmen nicht erkennen, wohin der Link führt.
 ```html
 <a href="/home" aria-label="Zur Startseite">
 	<svg>…</svg>
@@ -277,25 +265,20 @@ Längere Hinweise außerhalb des Linktextes können über `aria-describedby` def
 ## Bilder und Grafiken
 
 ### Bildbeschreibungen
-**Textalternativen [alt-Attribute] für Bilder erstellen.**
-
-Screenreader lesen Alt-Texte bei Bildern vor, sodass blinde oder sehbehinderte Nutzer verstehen, was ein Bild aussagt.
-- Ein alt-Attribut muss bei Bildern immer gesetzt werden, auch wenn es leer ist.
-
+Erstelle Textalternativen [alt-Attribute] für Bilder. Screenreader lesen Alt-Texte bei Bildern vor, sodass blinde oder sehbehinderte Nutzer verstehen, was ein Bild aussagt.
 - Der Alt-Text soll den Informationsgehalt knapp und präzise wiedergeben.
+- Der Alt-Text muss bei Bildern immer gesetzt werden, auch wenn er leer ist.
 	```html
 	<!-- Informatives Bild -->
 	<img src="tour.jpg" alt="Radfahrer auf Waldweg bei Sonnenaufgang">
 	```
-- Leerer Alt-Text für dekorative Bilder
+- Dekorative Bilder erhalten einen leeren Alt-Text.
 	```html
 	<!-- Dekoratives Bild (wird vom Screenreader übersprungen) -->
 	<img src="ornament.svg" alt="" />
 	```
 ### ARIA-Attribute bei Bilden
-**Zusätzlich erklärender Inhalt für Grafiken erstellen.**
-
-Mit ARIA-Attributen lassen sich Bilder um zusätzliche erklärende Inhalte ergänzen.
+Erstelle zusätzlich erklärenden Inhalt für Grafiken. Mit ARIA-Attributen lassen sich Bilder um zusätzliche erklärende Inhalte ergänzen.
 - **aria-describedby**
 	```html
 	<!-- Verknüpft das Bild mit einer ausführlichen Beschreibung -->
@@ -314,9 +297,7 @@ Mit ARIA-Attributen lassen sich Bilder um zusätzliche erklärende Inhalte ergä
 	```
 
 ### Responsive Bilder
-**Bilder flexibel an unterschiedliche Bildschirmgrößen anpassen.**
-
-Durch Techniken wie `picture` und `srcset` wird dem Browser die passende Bildvariante geliefert – optimiert für Smartphones, Tablets und Desktops.
+Passe Bilder flexibel an unterschiedliche Bildschirmgrößen an. Durch Techniken wie `picture` und `srcset` wird dem Browser die passende Bildvariante geliefert – optimiert für Smartphones, Tablets und Desktops.
 ```html
 <picture>
   <source media="(min-width: 800px)" srcset="large.jpg">
@@ -325,7 +306,7 @@ Durch Techniken wie `picture` und `srcset` wird dem Browser die passende Bildvar
 ```
 
 ### (Komplexe) Grafiken
-**Grafiken und Diagramme semantisch korrekt mit Beschriftung versehen.** Umfasse das Bild und seine Beschreibung mit `<figure>` und nutze `<figcaption>` für detaillierte Bildtexte.
+Versehe Grafiken und Diagramme semantisch korrekt mit Beschriftung. Umfasse das Bild und seine Beschreibung mit `<figure>` und nutze `<figcaption>` für detaillierte Bildtexte.
 ```html
 <figure>
   <img src="chart.png" alt="Mitgliederzahlen 2019 bis 2024" aria-describedby="desc-chart">
@@ -334,12 +315,12 @@ Durch Techniken wie `picture` und `srcset` wird dem Browser die passende Bildvar
 ```
 
 ### Bilder mit Text
-**Wichtigen Text als Grafik vermeiden.** Screenreader und Vergrößerungsprogramme können Textgrafiken nicht erfassen. Nutze stattdessen HTML-Text oder CSS.
+Vermeide wichtigen Text als Grafik. Screenreader und Vergrößerungsprogramme können Textgrafiken nicht erfassen. Nutze stattdessen HTML-Text oder CSS.
 
 ---
 
 ## Videos
-**Inhalte für alle Nutzer zugänglich machen.**
+Mache Inhalte für alle Nutzer zugänglich.
 - Untertitel von gesprochenem Text in Videos erstellen
 - Transkript (Textfassung) des gesprochenen Inhalts und relevanter Geräusche erstellen
 - Videoinhalte in Gebärdensprache anbieten, um sie für Gehörlose vollständig zugänglich zu machen.
@@ -361,8 +342,7 @@ Durch Techniken wie `picture` und `srcset` wird dem Browser die passende Bildvar
 ---
 
 ## Formulare
-**Formulare so gestaltet, dass sie für Screenreader- und Tastaturnutzer vollständig nutzbar sind.**
-Barrierefreie Formulare verwenden eindeutige Labels, logische Fokus-Reihenfolge, klare Fehlermeldungen, Pflichtfeld-Kennzeichnungen und ggf. Hilfetexte oder Live-Regionen. So wird sichergestellt, dass alle Nutzer Daten korrekt und selbstständig eingeben können.
+Gestalte Formulare so, dass sie für Screenreader- und Tastaturnutzer vollständig nutzbar sind. Barrierefreie Formulare verwenden eindeutige Labels, logische Fokus-Reihenfolge, klare Fehlermeldungen, Pflichtfeld-Kennzeichnungen und ggf. Hilfetexte oder Live-Regionen. So wird sichergestellt, dass alle Nutzer Daten korrekt und selbstständig eingeben können.
 
 - **Labels**
   Eindeutige `<label>`-Elemente für jedes Feld. Screenreader lesen Labels vor, Nutzer verstehen sofort, wofür ein Feld gedacht ist.
@@ -392,27 +372,53 @@ Barrierefreie Formulare verwenden eindeutige Labels, logische Fokus-Reihenfolge,
 
 ## Visuelle Barrieren
 ### Farbkontrast
-- Ausreichender Kontrast zwischen Text und Hintergrund schaffen (z. B. WCAG AA: 4,5:1).
+Ein ausreichender Farbkontrast zwischen Text und Hintergrund ist notwendig, damit Inhalte auch bei Sehbeeinträchtigungen gut lesbar sind.
+- Stelle einen Kontrast von mindestens 4,5:1 (WCAG AA) zwischen Text und Hintergrund sicher.
+- Prüfe alle Farben mit einem Kontrast-Checker.
+- Vermeide Farbkombinationen mit geringem Kontrast.
+- Nutze keine rein farbigen Hinweise ohne ausreichenden Kontrast.
 
 ### Sehbeeinträchtigung
-Bei Einschränkungen des Sehvermögens (z. B. geringe Sehschärfe, Tunnelblick) helfen klare Kontraste, flexible Schriftgrößen und gute Strukturen, dass die Seiten bedienbar bleiben.
-- Klare Kontraste verwenden
-- Flexible Schriftgrößen verwenden
-- Seiten vernünftig strukturieren
+Sehbeeinträchtigungen wie geringe Sehschärfe oder Tunnelblick erschweren das Erfassen von Inhalten. Klare Kontraste, flexible Schriftgrößen und eine übersichtliche Struktur helfen, Webseiten für Betroffene zugänglich zu machen.
+- Verwende klare Kontraste.
+- Erlaube flexible Anpassung der Schriftgröße.
+- Strukturiere Seiten übersichtlich.
+- Vermeide zu kleine Schriftgrößen.
+- Halte ausreichend Abstand zwischen Elementen ein.
 
 ### Farbenblindheit
-- Informationen dürfen nicht nur durch Farbe vermittelt werden.
-- Zusätzliche Symbole, Muster oder Texte verhindern, dass Inhalte verloren gehen.
+Farbenblindheit erschwert es vielen Menschen, farbliche Unterschiede zu erkennen. Damit alle Inhalte verständlich bleiben, dürfen wichtige Informationen nicht ausschließlich durch Farben vermittelt werden.
+- Vermittle Informationen nicht nur durch Farbe.
+- Stelle sicher, dass alle Inhalte auch ohne Farberkennung verständlich sind.
+- Ergänze Farben immer durch Symbole, Muster oder Texte.
+```html
+<!-- Beispiel für Ergänzung durch Symbole und Text -->
+<div style="color: green;">●</span> <span>Erledigt</div>
+<div style="color: red;">✖</span> <span>Nicht erledigt</div>
+```
 
 ---
 
 ## Kognitive Barrieren
 
 ### Legasthenie
-Gut lesbare Schriftarten, klare Gliederung und Vermeidung langer Textblöcke helfen, Inhalte zugänglicher zu machen.
+Menschen mit Legasthenie haben Schwierigkeiten beim Lesen und Verarbeiten von geschriebenem Text. Für sie ist es besonders wichtig, dass Texte gut lesbar gestaltet sind. Folgende Maßnahmen erleichtern Zugang zum Inhalt.
+- Verwende klare, gut lesbare Schriftarten.
+- Sorge für ausreichend Zeilenabstand.
+- Schreibe kurze Absätze.
+- Gliedere Texte übersichtlich.
 
 ### Leichte Sprache
-
+Leichte Sprache ist ein spezielles Angebot, das komplexe Inhalte vereinfacht und so für viele Menschen mit kognitiven Einschränkungen, Lernschwierigkeiten oder geringen Deutschkenntnissen zugänglich macht.
+- Vermeide komplexe Sätze.
+- Erkläre oder vermeide Fachbegriffe und Fremdwörter.
+- Verwende kurze Absätze und eine klare Gliederung.
+- Nenne wichtige Informationen zuerst.
+- Schreibe aktiv statt passiv.
+- Setze Bilder oder Symbole zur Unterstützung ein.
+- Verwende einfache und bekannte Wörter.
+- Gliedere lange Texte in überschaubare Abschnitte.
+- Lasse Inhalte von Personen mit Lernschwierigkeiten testen.
 
 ---
 
@@ -493,15 +499,24 @@ Die folgende Checkliste hilft dir einzuschätzen, wie zugänglich deine Webseite
 - [ ] Hintergrund-Inhalte sperren [→ Erklärung](#modale-dialoge-und-popups)
 
 **Formulare**
-- [ ]
+- [ ] adf
 
 **Visuelle Barrieren**
-- [ ] Farbkontrast auf WCAG AA: 4,5:1 überprüfen
-- [ ] Ausreichende Schriftgrößen verwenden
-- [ ] Seiten vernünftig strukturieren
-- [ ] Informationen nicht nur durch Farbe vermitteln
+- [ ] Farbkontrast auf WCAG AA: 4,5:1 überprüfen [→ Erklärung](#farbkontrast)
+- [ ] Farbkombinationen mit geringem Kontrast vermeiden. [→ Erklärung](#farbkontrast)
+- [ ] Keine farbigen Hinweise ohne ausreichenden Kontrast [→ Erklärung](#farbkontrast)
+- [ ] Flexible Anpassung der Schriftgröße. [→ Erklärung](#sehbeeinträchtigung)
+- [ ] Strukturiere Seiten übersichtlich. [→ Erklärung](#sehbeeinträchtigung)
+- [ ] Kleine Schriftgrößen vermeiden. [→ Erklärung](#sehbeeinträchtigung)
+- [ ] Ausreichend Abstand zwischen Elementen. [→ Erklärung](#sehbeeinträchtigung)
+- [ ] Vermittle Informationen nicht nur durch Farbe. [→ Erklärung](#farbenblindheit)
+- [ ] Stelle sicher, dass Inhalte ohne Farberkennung verständlich sind. [→ Erklärung](#farbenblindheit)
+- [ ] Ergänze Farben durch Symbole oder Texte. [→ Erklärung](#farbenblindheit)
 
 **Kognitive Barrieren**
-- [ ]
-- [ ]
+- [ ] Verwende klare, gut lesbare Schriftarten. [→ Erklärung](#legasthenie)
+- [ ] Sorge für ausreichend Zeilenabstand. [→ Erklärung](#legasthenie)
+- [ ] Schreibe kurze Absätze. [→ Erklärung](#legasthenie)
+- [ ] Gliedere Texte übersichtlich. [→ Erklärung](#legasthenie)
+- [ ] Erstelle eine Version in leichter Sprache von inhaltlich komplexen Seiten [→ Erklärung](#leichte-sprache)
 
