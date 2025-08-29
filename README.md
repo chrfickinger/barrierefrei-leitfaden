@@ -36,6 +36,7 @@ Mit diesem Leitfaden stellst du sicher, dass deine Seiten klar, verständlich un
 		- [Leichte Sprache](#leichte-sprache)
 	- [Rechtliche Angaben](#rechtliche-angaben)
 		- [Barrierefreiheitserklärung](#barrierefreiheitserklärung)
+	- [Sonstiges](#sonstiges)
 		- [Barriere melden](#barriere-melden)
 	- [Tests](#tests)
 		- [Screenreader-Test](#screenreader-test)
@@ -448,7 +449,7 @@ Die Barrierefreiheitserklärung informiert darüber, wie zugänglich eine Websei
 
 ## Sonstiges
 ### Barriere melden
-Nicht rechtlich vorgeschrieben, aber sinnvoll: Gib Menschen mit Beeinträchtigungen die Möglichkeit, Barrieren bei der Bedienung der Webseite zu melden, anstatt sich ausschließlich auf automatisierte Tools zu verlassen.
+Nicht vorgeschrieben, aber sinnvoll: Gib Menschen mit Beeinträchtigungen die Möglichkeit, Barrieren bei der Bedienung der Webseite zu melden, anstatt sich ausschließlich auf automatisierte Tools zu verlassen.
 
 ---
 
@@ -466,29 +467,28 @@ aXe, WAVE oder Lighthouse auf fehlende Linktexte prüfen.
 
 ---
 
-
 ## Checkliste
 Die folgende Checkliste hilft dabei, Webseiten so zu gestalten, dass sie für Menschen mit Beeinträchtigungen bestmöglich zugänglich
 
 - [ ] **Grundgerüst:** Semantische Regionen definieren [→ Erklärung](#landmarken)
 - [ ] **Grundgerüst:** Zusätzliche ARIA-Attribute ergänzen [→ Erklärung](#aria-attribute)
-- [ ] **Tastatursteuerung:** Links mit tabindex auszeichnen [→ Erklärung](#fokus-reihenfolge)
-- [ ] **Tastatursteuerung:** Buttons mit tabindex auszeichnen [→ Erklärung](#fokus-reihenfolge)
-- [ ] **Tastatursteuerung:** Formulare mit tabindex auszeichnen [→ Erklärung](#fokus-reihenfolge)
+- [ ] **Tastatursteuerung:** Links mit [tabindex] auszeichnen [→ Erklärung](#fokus-reihenfolge)
+- [ ] **Tastatursteuerung:** Buttons mit [tabindex] auszeichnen [→ Erklärung](#fokus-reihenfolge)
+- [ ] **Tastatursteuerung:** Formulare mit [tabindex] auszeichnen [→ Erklärung](#fokus-reihenfolge)
 - [ ] **Tastatursteuerung:** Dekorative Bereiche enfernen [→ Erklärung](#fokus-reihenfolge)
 - [ ] **Tastatursteuerung:** Sprungmarke zum Hauptinhalt einbauen [→ Erklärung](#skip-link)
 - [ ] **Überschriften:** Überschriften-Reihenfolge einhalten [→ Erklärung](#überschriften)
-- [ ] **Überschriften:** Jede Seite nur eine h1 [→ Erklärung](#überschriften)
+- [ ] **Überschriften:** Jede Seite nur eine [h1] [→ Erklärung](#überschriften)
 - [ ] **Überschriften:** Logische Gliederung einhalten [→ Erklärung](#überschriften)
-- [ ] **Links:** Aussagekräftige Linktexte verwenden ([→ Erklärung](#aussagekräftige-linktexte))
+- [ ] **Links:** Aussagekräftige Linktexte verwenden [→ Erklärung](#aussagekräftige-linktexte)
 - [ ] **Links:** Keine doppelten Linktexte [→ Erklärung](#kontext-und-redundanz)
 - [ ] **Links:** Linktexte nicht abschneiden [→ Erklärung](#kontext-und-redundanz)
 - [ ] **Links:** Verlinkte Icons ohne sichtbaren Text beschreiben [→ Erklärung](#icon-only-links)
 - [ ] **Links:** [aria-label] statt [title] benutzen [→ Erklärung](#kein-title-tag-verwenden)
 - [ ] **Links:** Zusätzliche Hinweise mit [.sr-only] beschreiben [→ Erklärung](#verwendung-von-sr-only)
 - [ ] **Links:** Längere Hinweise mit [aria-describedby] definieren [→ Erklärung](#zusätzliches-aria-attribut)
-- [ ] **Bilder:** Alt-Text für Bilder erstellen [→ Erklärung](#bildbeschreibungen)
-- [ ] **Bilder:** Leerer Alt-Text für dekorative Bilder [→ Erklärung](#bildbeschreibungen)
+- [ ] **Bilder:** Erstelle [alt]-Text für Bilder [→ Erklärung](#bildbeschreibungen)
+- [ ] **Bilder:** Erstelle leeren [alt]-Text für dekorative Bilder [→ Erklärung](#bildbeschreibungen)
 - [ ] **Bilder:** Zusätzliche ARIA-Attribute ergänzen [→ Erklärung](#aria-attribute-bei-bilden)
 - [ ] **Bilder:** Bilder an unterschiedliche Bildschirmgrößen anpassen [→ Erklärung](#responsive-bilder)
 - [ ] **Bilder:** Korrekte Semantik für Grafiken und Diagramme [→ Erklärung](#komplexe-grafiken)
@@ -499,14 +499,14 @@ Die folgende Checkliste hilft dabei, Webseiten so zu gestalten, dass sie für Me
 - [ ] **Dokumente** Erstelle barrierefreie Dokumente [→ Erklärung](#dokumente)
 - [ ] **Modals und Popups:** Tastaturnavigation ermöglichen [→ Erklärung](#modale-dialoge-und-popups)
 - [ ] **Modals und Popups:** Hintergrund-Inhalte sperren [→ Erklärung](#modale-dialoge-und-popups)
-- [ ] **Formulare:** Verwende für jedes Feld ein eindeutiges `<label>`.
-- [ ] **Formulare:** Ergänze Hilfetexte mit `aria-describedby` oder direkt unter dem Feld.
-- [ ] **Formulare:** Zeige Fehlermeldungen klar sichtbar und mit `role="alert"` an.
-- [ ] **Formulare:** Kennzeichne Pflichtfelder mit `required` und einer visuellen Markierung.
-- [ ] **Formulare:** Stelle eine logische Tab-Reihenfolge für alle Felder und Buttons sicher.
-- [ ] **Formulare:** Verknüpfe `<label>`-Elemente eindeutig mit dem jeweiligen Feld über das `for`-Attribut und die Feld-ID.
-- [ ] **Formulare:** Setze sinnvolle `autocomplete`-Attribute (z. B. `autocomplete="email"`).
-- [ ] **Formulare:** Gib Statusmeldungen über `aria-live`-Regionen aus.
+- [ ] **Formulare:** Verwende für jedes Feld ein eindeutiges [label] [→ Erklärung](#formulare)
+- [ ] **Formulare:** Ergänze Hilfetexte mit [aria-describedby] [→ Erklärung](#formulare)
+- [ ] **Formulare:** Zeige Fehlermeldungen sichtbar und mit [role="alert"] an [→ Erklärung](#formulare)
+- [ ] **Formulare:** Kennzeichne Pflichtfelder [→ Erklärung](#formulare)
+- [ ] **Formulare:** Stelle eine logische Tab-Reihenfolge sicher [→ Erklärung](#formulare)
+- [ ] **Formulare:** Verknüpfe [label]-Elemente eindeutig mit Feld [→ Erklärung](#formulare)
+- [ ] **Formulare:** Setze sinnvolle [autocomplete]-Attribute [→ Erklärung](#formulare)
+- [ ] **Formulare:** Definiere Statusmeldungen über [aria-live]-Regionen [→ Erklärung](#formulare)
 - [ ] **Visuelle Barrieren:** Farbkontrast auf WCAG AA: 4,5:1 überprüfen [→ Erklärung](#farbkontrast)
 - [ ] **Visuelle Barrieren:** Farbkombinationen mit geringem Kontrast vermeiden. [→ Erklärung](#farbkontrast)
 - [ ] **Visuelle Barrieren:** Keine farbigen Hinweise ohne ausreichenden Kontrast [→ Erklärung](#farbkontrast)
@@ -524,4 +524,4 @@ Die folgende Checkliste hilft dabei, Webseiten so zu gestalten, dass sie für Me
 - [ ] **Kognitive Barrieren:** Erstelle eine Seite mit Navigationshinweisen [→ Erklärung](#navigationshinweise)
 - [ ] **Kognitive Barrieren:** Erstelle eine Version in leichter Sprache von inhaltlich komplexen Seiten [→ Erklärung](#leichte-sprache)
 - [ ] **Rechtliche Angaben:** Erstelle eine Barrierefreiheitserklärung [→ Erklärung](#barrierefreiheitserklärung)
-- [ ] **Sonstiges:** Ermögliche das Melden von Barrieren auf der Webseite.
+- [ ] **Sonstiges:** Ermögliche das Melden von Barrieren auf der Webseite. [→ Erklärung](#sonstiges)
