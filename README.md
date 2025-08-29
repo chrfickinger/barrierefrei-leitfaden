@@ -16,13 +16,14 @@ Mit diesem Leitfaden stellst du sicher, dass deine Seiten klar, verständlich un
 		- [Kein Title-Tag verwenden](#kein-title-tag-verwenden)
 		- [Verwendung von .sr-only](#verwendung-von-sr-only)
 		- [Zusätzliches ARIA-Attribut](#zusätzliches-aria-attribut)
-	- [Bilder und Grafiken](#bilder-und-grafiken)
+	- [Bilder](#bilder)
 		- [Bildbeschreibungen](#bildbeschreibungen)
 		- [ARIA-Attribute bei Bilden](#aria-attribute-bei-bilden)
 		- [Responsive Bilder](#responsive-bilder)
 		- [(Komplexe) Grafiken](#komplexe-grafiken)
-		- [Bilder mit Text](#bilder-mit-text)
+		- [Bilder mit (informativem) Text](#bilder-mit-informativem-text)
 	- [Videos](#videos)
+	- [Dokumente](#dokumente)
 	- [Modale Dialoge und Popups](#modale-dialoge-und-popups)
 	- [Formulare](#formulare)
 	- [Visuelle Barrieren](#visuelle-barrieren)
@@ -31,11 +32,10 @@ Mit diesem Leitfaden stellst du sicher, dass deine Seiten klar, verständlich un
 		- [Farbenblindheit](#farbenblindheit)
 	- [Kognitive Barrieren](#kognitive-barrieren)
 		- [Legasthenie](#legasthenie)
-		- [Leichte Sprache](#leichte-sprache)
-	- [Barrierefreie Dokumente](#barrierefreie-dokumente)
-	- [Rechtliche Vorgaben](#rechtliche-vorgaben)
-		- [Barrierefreierklärung](#barrierefreierklärung)
 		- [Navigationshinweise](#navigationshinweise)
+		- [Leichte Sprache](#leichte-sprache)
+	- [Rechtliche Angaben](#rechtliche-angaben)
+		- [Barrierefreiheitserklärung](#barrierefreiheitserklärung)
 		- [Barriere melden](#barriere-melden)
 	- [Tests](#tests)
 		- [Screenreader-Test](#screenreader-test)
@@ -262,7 +262,7 @@ Längere Hinweise außerhalb des Linktextes können über `aria-describedby` def
 
 ---
 
-## Bilder und Grafiken
+## Bilder
 
 ### Bildbeschreibungen
 Erstelle Textalternativen [alt-Attribute] für Bilder. Screenreader lesen Alt-Texte bei Bildern vor, sodass blinde oder sehbehinderte Nutzer verstehen, was ein Bild aussagt.
@@ -314,7 +314,7 @@ Versehe Grafiken und Diagramme semantisch korrekt mit Beschriftung. Umfasse das 
 </figure>
 ```
 
-### Bilder mit Text
+### Bilder mit (informativem) Text
 Vermeide wichtigen Text als Grafik. Screenreader und Vergrößerungsprogramme können Textgrafiken nicht erfassen. Nutze stattdessen HTML-Text oder CSS.
 
 ---
@@ -324,6 +324,16 @@ Mache Inhalte für alle Nutzer zugänglich.
 - Untertitel von gesprochenem Text in Videos erstellen
 - Transkript (Textfassung) des gesprochenen Inhalts und relevanter Geräusche erstellen
 - Videoinhalte in Gebärdensprache anbieten, um sie für Gehörlose vollständig zugänglich zu machen.
+
+---
+
+## Dokumente
+Dokumente wie PDF, Word oder Präsentationen müssen so aufgebaut sein, dass sie auch von Screenreadern und anderen Hilfsmitteln gelesen werden können. Dazu gehören eine klare Struktur, korrekte Überschriften, Alt-Texte für Bilder und die richtige Lese-Reihenfolge.
+- Verwende eine logische Überschriften-Hierarchie.
+- Füge Alt-Texte für Bilder und Grafiken hinzu.
+- Setze Tags für die Dokumentstruktur.
+- Lege die richtige Lese-Reihenfolge fest.
+- Prüfe die Barrierefreiheit mit geeigneten Tools.
 
 ---
 
@@ -408,6 +418,13 @@ Menschen mit Legasthenie haben Schwierigkeiten beim Lesen und Verarbeiten von ge
 - Schreibe kurze Absätze.
 - Gliedere Texte übersichtlich.
 
+### Navigationshinweise
+Navigationshinweise erklären, wie die Webseite aufgebaut ist und wie Nutzer sich zurechtfinden. Sie helfen besonders Menschen mit kognitiven Einschränkungen oder geringer Leseerfahrung, die Inhalte und die Navigation der Seite besser zu verstehen.
+- Erkläre den Aufbau und die wichtigsten Bereiche der Webseite.
+- Beschreibe, wie die Navigation funktioniert.
+- Weisen auf besondere Funktionen oder Hilfen hin.
+- Platziere die Hinweise gut sichtbar, z. B. am Seitenanfang oder in einem eigenen Bereich.
+
 ### Leichte Sprache
 Leichte Sprache ist ein spezielles Angebot, das komplexe Inhalte vereinfacht und so für viele Menschen mit kognitiven Einschränkungen, Lernschwierigkeiten oder geringen Deutschkenntnissen zugänglich macht.
 - Vermeide komplexe Sätze.
@@ -422,17 +439,14 @@ Leichte Sprache ist ein spezielles Angebot, das komplexe Inhalte vereinfacht und
 
 ---
 
-## Barrierefreie Dokumente
-**Dokumente (PDF, Word, Präsentationen) mit zugänglicher Struktur versehen**
-Damit auch außerhalb von Webseiten Inhalte von Screenreadern lesbar sind – z. B. durch richtige Überschriften-Hierarchie, Alt-Texte, Tags und Lese-Reihenfolge.
+## Rechtliche Angaben
+### Barrierefreiheitserklärung
+Die Barrierefreiheitserklärung informiert darüber, wie zugänglich eine Webseite ist und welche Bereiche eventuell noch nicht barrierefrei sind. Sie nennt Ansprechpersonen und beschreibt, wie Barrieren gemeldet werden können.
+- Veröffentliche eine Barrierefreiheitserklärung auf der Webseite.
+- Beschreibe den aktuellen Stand der Barrierefreiheit.
+- Nenne Kontaktmöglichkeiten für Rückmeldungen zu Barrieren.
 
----
-
-## Rechtliche Vorgaben
-### Barrierefreierklärung
-
-### Navigationshinweise
-
+## Sonstiges
 ### Barriere melden
 Nicht rechtlich vorgeschrieben, aber sinnvoll: Gib Menschen mit Beeinträchtigungen die Möglichkeit, Barrieren bei der Bedienung der Webseite zu melden, anstatt sich ausschließlich auf automatisierte Tools zu verlassen.
 
@@ -451,72 +465,63 @@ Teste mit NVDA, VoiceOver oder JAWS.
 aXe, WAVE oder Lighthouse auf fehlende Linktexte prüfen.
 
 ---
----
+
 
 ## Checkliste
-Die folgende Checkliste hilft dir einzuschätzen, wie zugänglich deine Webseite für Menschen mit Beeinträchtigungen ist.
+Die folgende Checkliste hilft dabei, Webseiten so zu gestalten, dass sie für Menschen mit Beeinträchtigungen bestmöglich zugänglich
 
-**Grundgerüst**
-- [ ] Semantische Regionen definieren [→ Erklärung](#landmarken)
-- [ ] Zusätzliche ARIA-Attribute ergänzen [→ Erklärung](#aria-attribute)
-
-**Tastatursteuerung**
-- [ ] Links mit tabindex auszeichnen [→ Erklärung](#fokus-reihenfolge)
-- [ ] Buttons mit tabindex auszeichnen [→ Erklärung](#fokus-reihenfolge)
-- [ ] Formulare mit tabindex auszeichnen [→ Erklärung](#fokus-reihenfolge)
-- [ ] Dekorative Bereiche enfernen [→ Erklärung](#fokus-reihenfolge)
-- [ ] Sprungmarke zum Hauptinhalt einbauen [→ Erklärung](#skip-link)
-
-**Überschriften**
-- [ ] Überschriften-Reihenfolge einhalten [→ Erklärung](#überschriften)
-- [ ] Jede Seite nur eine h1 [→ Erklärung](#überschriften)
-- [ ] Logische Gliederung einhalten [→ Erklärung](#überschriften)
-
-**Links**
-- [ ] Aussagekräftige Linktexte verwenden ([→ Erklärung](#aussagekräftige-linktexte))
-- [ ] Keine doppelten Linktexte [→ Erklärung](#kontext-und-redundanz)
-- [ ] Linktexte nicht abschneiden [→ Erklärung](#kontext-und-redundanz)
-- [ ] Verlinkte Icons ohne sichtbaren Text beschreiben [→ Erklärung](#icon-only-links)
-- [ ] [aria-label] statt [title] benutzen [→ Erklärung](#kein-title-tag-verwenden)
-- [ ] Zusätzliche Hinweise mit [.sr-only] beschreiben [→ Erklärung](#verwendung-von-sr-only)
-- [ ] Längere Hinweise mit [aria-describedby] definieren [→ Erklärung](#zusätzliches-aria-attribut)
-
-**Bilder und Grafiken**
-- [ ] Alt-Text für Bilder erstellen [→ Erklärung](#bildbeschreibungen)
-- [ ] Leerer Alt-Text für dekorative Bilder [→ Erklärung](#bildbeschreibungen)
-- [ ] Zusätzliche ARIA-Attribute ergänzen [→ Erklärung](#aria-attribute-bei-bilden)
-- [ ] Bilder an unterschiedliche Bildschirmgrößen anpassen [→ Erklärung](#responsive-bilder)
-- [ ] Korrekte Semantik für Grafiken und Diagramme [→ Erklärung](#komplexe-grafiken)
-- [ ] Wichtigen Text als Grafik vermeiden [→ Erklärung](#bilder-mit-text)
-
-**Videos**
-- [ ] Untertitel für gesprochenen Text erstellen [→ Erklärung](#videos)
-- [ ] Transkript für gesprochenen Text und Geräusche erstellen [→ Erklärung](#videos)
-- [ ] Videos mit Gebärdensprache versehen [→ Erklärung](#videos)
-
-**Modale Dialoge und Popups**
-- [ ] Tastaturnavigation ermöglichen [→ Erklärung](#modale-dialoge-und-popups)
-- [ ] Hintergrund-Inhalte sperren [→ Erklärung](#modale-dialoge-und-popups)
-
-**Formulare**
-- [ ] adf
-
-**Visuelle Barrieren**
-- [ ] Farbkontrast auf WCAG AA: 4,5:1 überprüfen [→ Erklärung](#farbkontrast)
-- [ ] Farbkombinationen mit geringem Kontrast vermeiden. [→ Erklärung](#farbkontrast)
-- [ ] Keine farbigen Hinweise ohne ausreichenden Kontrast [→ Erklärung](#farbkontrast)
-- [ ] Flexible Anpassung der Schriftgröße. [→ Erklärung](#sehbeeinträchtigung)
-- [ ] Strukturiere Seiten übersichtlich. [→ Erklärung](#sehbeeinträchtigung)
-- [ ] Kleine Schriftgrößen vermeiden. [→ Erklärung](#sehbeeinträchtigung)
-- [ ] Ausreichend Abstand zwischen Elementen. [→ Erklärung](#sehbeeinträchtigung)
-- [ ] Vermittle Informationen nicht nur durch Farbe. [→ Erklärung](#farbenblindheit)
-- [ ] Stelle sicher, dass Inhalte ohne Farberkennung verständlich sind. [→ Erklärung](#farbenblindheit)
-- [ ] Ergänze Farben durch Symbole oder Texte. [→ Erklärung](#farbenblindheit)
-
-**Kognitive Barrieren**
-- [ ] Verwende klare, gut lesbare Schriftarten. [→ Erklärung](#legasthenie)
-- [ ] Sorge für ausreichend Zeilenabstand. [→ Erklärung](#legasthenie)
-- [ ] Schreibe kurze Absätze. [→ Erklärung](#legasthenie)
-- [ ] Gliedere Texte übersichtlich. [→ Erklärung](#legasthenie)
-- [ ] Erstelle eine Version in leichter Sprache von inhaltlich komplexen Seiten [→ Erklärung](#leichte-sprache)
-
+- [ ] **Grundgerüst:** Semantische Regionen definieren [→ Erklärung](#landmarken)
+- [ ] **Grundgerüst:** Zusätzliche ARIA-Attribute ergänzen [→ Erklärung](#aria-attribute)
+- [ ] **Tastatursteuerung:** Links mit tabindex auszeichnen [→ Erklärung](#fokus-reihenfolge)
+- [ ] **Tastatursteuerung:** Buttons mit tabindex auszeichnen [→ Erklärung](#fokus-reihenfolge)
+- [ ] **Tastatursteuerung:** Formulare mit tabindex auszeichnen [→ Erklärung](#fokus-reihenfolge)
+- [ ] **Tastatursteuerung:** Dekorative Bereiche enfernen [→ Erklärung](#fokus-reihenfolge)
+- [ ] **Tastatursteuerung:** Sprungmarke zum Hauptinhalt einbauen [→ Erklärung](#skip-link)
+- [ ] **Überschriften:** Überschriften-Reihenfolge einhalten [→ Erklärung](#überschriften)
+- [ ] **Überschriften:** Jede Seite nur eine h1 [→ Erklärung](#überschriften)
+- [ ] **Überschriften:** Logische Gliederung einhalten [→ Erklärung](#überschriften)
+- [ ] **Links:** Aussagekräftige Linktexte verwenden ([→ Erklärung](#aussagekräftige-linktexte))
+- [ ] **Links:** Keine doppelten Linktexte [→ Erklärung](#kontext-und-redundanz)
+- [ ] **Links:** Linktexte nicht abschneiden [→ Erklärung](#kontext-und-redundanz)
+- [ ] **Links:** Verlinkte Icons ohne sichtbaren Text beschreiben [→ Erklärung](#icon-only-links)
+- [ ] **Links:** [aria-label] statt [title] benutzen [→ Erklärung](#kein-title-tag-verwenden)
+- [ ] **Links:** Zusätzliche Hinweise mit [.sr-only] beschreiben [→ Erklärung](#verwendung-von-sr-only)
+- [ ] **Links:** Längere Hinweise mit [aria-describedby] definieren [→ Erklärung](#zusätzliches-aria-attribut)
+- [ ] **Bilder:** Alt-Text für Bilder erstellen [→ Erklärung](#bildbeschreibungen)
+- [ ] **Bilder:** Leerer Alt-Text für dekorative Bilder [→ Erklärung](#bildbeschreibungen)
+- [ ] **Bilder:** Zusätzliche ARIA-Attribute ergänzen [→ Erklärung](#aria-attribute-bei-bilden)
+- [ ] **Bilder:** Bilder an unterschiedliche Bildschirmgrößen anpassen [→ Erklärung](#responsive-bilder)
+- [ ] **Bilder:** Korrekte Semantik für Grafiken und Diagramme [→ Erklärung](#komplexe-grafiken)
+- [ ] **Bilder:** Wichtigen Text als Grafik vermeiden [→ Erklärung](#bilder-mit-informativem-text)
+- [ ] **Videos:** Untertitel für gesprochenen Text erstellen [→ Erklärung](#videos)
+- [ ] **Videos:** Transkript für gesprochenen Text und Geräusche erstellen [→ Erklärung](#videos)
+- [ ] **Videos:** Videos mit Gebärdensprache versehen [→ Erklärung](#videos)
+- [ ] **Dokumente** Erstelle barrierefreie Dokumente [→ Erklärung](#dokumente)
+- [ ] **Modals und Popups:** Tastaturnavigation ermöglichen [→ Erklärung](#modale-dialoge-und-popups)
+- [ ] **Modals und Popups:** Hintergrund-Inhalte sperren [→ Erklärung](#modale-dialoge-und-popups)
+- [ ] **Formulare:** Verwende für jedes Feld ein eindeutiges `<label>`.
+- [ ] **Formulare:** Ergänze Hilfetexte mit `aria-describedby` oder direkt unter dem Feld.
+- [ ] **Formulare:** Zeige Fehlermeldungen klar sichtbar und mit `role="alert"` an.
+- [ ] **Formulare:** Kennzeichne Pflichtfelder mit `required` und einer visuellen Markierung.
+- [ ] **Formulare:** Stelle eine logische Tab-Reihenfolge für alle Felder und Buttons sicher.
+- [ ] **Formulare:** Verknüpfe `<label>`-Elemente eindeutig mit dem jeweiligen Feld über das `for`-Attribut und die Feld-ID.
+- [ ] **Formulare:** Setze sinnvolle `autocomplete`-Attribute (z. B. `autocomplete="email"`).
+- [ ] **Formulare:** Gib Statusmeldungen über `aria-live`-Regionen aus.
+- [ ] **Visuelle Barrieren:** Farbkontrast auf WCAG AA: 4,5:1 überprüfen [→ Erklärung](#farbkontrast)
+- [ ] **Visuelle Barrieren:** Farbkombinationen mit geringem Kontrast vermeiden. [→ Erklärung](#farbkontrast)
+- [ ] **Visuelle Barrieren:** Keine farbigen Hinweise ohne ausreichenden Kontrast [→ Erklärung](#farbkontrast)
+- [ ] **Visuelle Barrieren:** Flexible Anpassung der Schriftgröße. [→ Erklärung](#sehbeeinträchtigung)
+- [ ] **Visuelle Barrieren:** Strukturiere Seiten übersichtlich. [→ Erklärung](#sehbeeinträchtigung)
+- [ ] **Visuelle Barrieren:** Kleine Schriftgrößen vermeiden. [→ Erklärung](#sehbeeinträchtigung)
+- [ ] **Visuelle Barrieren:** Ausreichend Abstand zwischen Elementen. [→ Erklärung](#sehbeeinträchtigung)
+- [ ] **Visuelle Barrieren:** Vermittle Informationen nicht nur durch Farbe. [→ Erklärung](#farbenblindheit)
+- [ ] **Visuelle Barrieren:** Stelle sicher, dass Inhalte ohne Farberkennung verständlich sind. [→ Erklärung](#farbenblindheit)
+- [ ] **Visuelle Barrieren:** Ergänze Farben durch Symbole oder Texte. [→ Erklärung](#farbenblindheit)
+- [ ] **Kognitive Barrieren:** Verwende klare, gut lesbare Schriftarten. [→ Erklärung](#legasthenie)
+- [ ] **Kognitive Barrieren:** Sorge für ausreichend Zeilenabstand. [→ Erklärung](#legasthenie)
+- [ ] **Kognitive Barrieren:** Schreibe kurze Absätze. [→ Erklärung](#legasthenie)
+- [ ] **Kognitive Barrieren:** Gliedere Texte übersichtlich. [→ Erklärung](#legasthenie)
+- [ ] **Kognitive Barrieren:** Erstelle eine Seite mit Navigationshinweisen [→ Erklärung](#navigationshinweise)
+- [ ] **Kognitive Barrieren:** Erstelle eine Version in leichter Sprache von inhaltlich komplexen Seiten [→ Erklärung](#leichte-sprache)
+- [ ] **Rechtliche Angaben:** Erstelle eine Barrierefreiheitserklärung [→ Erklärung](#barrierefreiheitserklärung)
+- [ ] **Sonstiges:** Ermögliche das Melden von Barrieren auf der Webseite.
