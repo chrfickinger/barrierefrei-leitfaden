@@ -170,8 +170,8 @@ Versehe Inhalte mit zusätzlichen Erklärungen wenn notwendig. Wenn die Semantik
 
 ### Fokus-Reihenfolge
 Halte die logische Reihenfolge für Tastaturnavigation ein. Viele Nutzer bedienen Webseiten ausschließlich mit Tastatur. Wenn der Fokus nicht sinnvoll gesetzt ist, können Inhalte unzugänglich oder verwirrend sein.
-- Links, Buttons, Formulare mit`tabindex` auszeichnen.
-- Dekorative Bereiche aus Tastaturnavigation enfernen.
+- ✔ Links, Buttons, Formulare mit`tabindex` auszeichnen.
+- ✔ Dekorative Bereiche aus Tastaturnavigation enfernen.
 
 ```html
 <!-- Link nicht erreichbar-->
@@ -449,7 +449,10 @@ Die Barrierefreiheitserklärung informiert darüber, wie zugänglich eine Websei
 
 ## Sonstiges
 ### Barriere melden
-Nicht vorgeschrieben, aber sinnvoll: Gib Menschen mit Beeinträchtigungen die Möglichkeit, Barrieren bei der Bedienung der Webseite zu melden, anstatt sich ausschließlich auf automatisierte Tools zu verlassen.
+Gib Menschen mit Beeinträchtigungen die Möglichkeit, Barrieren bei der Bedienung der Webseite zu melden, anstatt sich ausschließlich auf automatisierte Tools zu verlassen.
+- Ermögliche das Melden von Barrieren auf der Webseite.
+- Stelle ein gut sichtbares Kontaktformular oder eine E-Mail-Adresse bereit.
+- Reagiere zeitnah auf eingehende Rückmeldungen.
 
 ---
 
